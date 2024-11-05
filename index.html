@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRUMBO</title>
+  <link rel="shortcut icon" href="./images/trump.jpg" type="image/x-icon" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- ready to deploy -->
+  <style>
+    /* Background video styling */
+    .background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    /* Ensuring other content stays on top of the video */
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      /* Adjust text color for visibility */
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+
+  <!-- marquee style -->
+
+  <style>
+    .marquee-container {
+      height: 300px;
+      /* Set height for the marquee */
+      overflow: hidden;
+      /* Hide overflow */
+      position: relative;
+      /* Relative positioning for animation */
+    }
+
+    .marquee {
+      position: absolute;
+      width: 100%;
+      animation: scroll 30s linear infinite;
+      /* Adjust duration for slower speed */
+    }
+
+    .marquee img {
+      width: 100%;
+      /* Full width for each image */
+      height: auto;
+      /* Maintain aspect ratio */
+      display: block;
+      /* Prevent extra space below images */
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+
+      /* Start from the first image */
+      20% {
+        transform: translateY(0);
+      }
+
+      /* Hold the first image */
+      25% {
+        transform: translateY(-100%);
+      }
+
+      /* Move to the second image */
+      45% {
+        transform: translateY(-100%);
+      }
+
+      /* Hold the second image */
+      50% {
+        transform: translateY(-200%);
+      }
+
+      /* Move to the third image */
+      70% {
+        transform: translateY(-200%);
+      }
+
+      /* Hold the third image */
+      75% {
+        transform: translateY(-300%);
+      }
+
+      /* Move to the fourth image */
+      95% {
+        transform: translateY(-300%);
+      }
+
+      /* Hold the fourth image */
+      100% {
+        transform: translateY(-400%);
+      }
+
+      /* Move to the fifth image */
+    }
+  </style>
+
+
+
+
+  <style>
+    /* Popup styling */
+    #popupModal .modal-dialog {
+      max-width: 400px;
+    }
+
+    /* Banner image spacing */
+    .banner-content {
+      padding: 20px;
+    }
+
+    /* Social icons */
+    .social-icons a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body class="content">
+  <video class="background-video" autoplay muted loop>
+    <source src="./images/back.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Popup Modal -->
+  <div style="background: linear-gradient(#00000035,#00000041),url(/images/tr.png);background-repeat: no-repeat;background-size: cover;background-position:center center ;display: flex!important;
+  align-items: center;
+  justify-content: center;" class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div style="background: rgb(253, 184, 54); " class="modal-content text-center">
+        <div style="display: flex;align-items: center;justify-content: center;">
+          <img style="border-radius: 20px; padding: 4%; width: 80%; height: auto;" src="./images/trump.jpg"
+            alt="Popup Image" style="" />
+        </div>
+        <h5 style="color: black;" class="modal-title mt-3" id="popupModalLabel">
+          Welcome to $TRUMBO
+        </h5>
+        <div class="modal-body">
+          <button style="font-weight: bold; font-size: 25px; letter-spacing: 8px;" type="button" class="btn btn-danger"
+            data-bs-dismiss="modal">
+            FIRE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav style="background-color: rgb(54, 45, 13);" class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img style="width: 75px; height: 80px" src="./images/logo.png" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a style="color: white;" class="nav-link" href="/">Home</a></li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#tokenomics">Tokenomics</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#howtobuy">How to Buy</a>
+          </li>
+          <li class="nav-item border rounded"><a style="color: white;" class="nav-link" href="chartlink">CHART</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="container py-5 my-5">
+    <div class="row">
+      <div class="col-md-6 banner-content my-5 mt-5">
+        <h2>Welcome to Our Project</h2>
+        <p>Here’s an introduction to the project and what it offers.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="./images/logo.png" style="width: 450px;" alt="Banner Image" class="img-fluid" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- About Section -->
+
+  <div style="margin-top: 120px;" class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Column (Image) -->
+      <div style="width:80%;margin:0 auto" style="text-align: center;">
+        <h2 data-aos="zoom-in-down">About Us</h2>
+        <p class="mt-3">
+          We are on a mission to revolutionize the blockchain space. With our innovative ideas and dedicated team, we
+          aim to bring forth a project that captivates and empowers our community. Join us on our journey to push
+          boundaries and create something remarkable together.
+        </p>
+
+        <div data-aos="zoom-in-down" class="vid_wrapper">
+          <video class="vid" controls loop>
+            <source src="./images/game.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- <img src="/images/border.png" class="vid_img" alt=""> -->
+        </div>
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+          <a style="background-color: lightcyan; text-decoration: none; padding: 10px 30px; font-size: 25px; font-weight: bold; width: 60%; border-radius: 8px; display: inline-block;;"
+            href="https://app.mydomain.com/"> PLAY </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Section Title -->
+  <!-- <section class="text-center my-5">
+      <h2>Main Section Title</h2>
+    </section> -->
+
+  <!-- Video Section -->
+
+  <section data-aos="zoom-in-down" style="margin-top: 120px;" id="tokenomics" class="text-center ">
+    <h2>TOKENOMICS</h2>
+  </section>
+
+  <div class="container my-5">
+    <div class="row align-items-center">
+
+      <!-- Left Column (Tokenomics Cards) -->
+      <div data-aos="zoom-in-right" class="col-md-6">
+        <div class="card mb-4" style="background-color: #f8f9fa;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Total Supply : 1 Billion</h5>
+          </div>
+        </div>
+        <div class="card mb-4" style="background-color: #e9ecef;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ticker : $TRUMBO</h5>
+          </div>
+        </div>
+        <div class="card mb-4" style="background-color: #f8f9fa;">
+          <div class="card-body text-center">
+            <h5 class="card-title">CHAIN : ETHEREUM</h5>
+          </div>
+        </div>
+        <div class="card mb-4" style="background-color: #f8f9fa;">
+          <div class="card-body text-center">
+            <h5 class="card-title">LP : BURNED</h5>
+          </div>
+        </div>
+        <div class="card mb-4" style="background-color: #f8f9fa;">
+          <div class="card-body text-center">
+            <h5 class="card-title">TAX : 0/0</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (Image) -->
+      <div data-aos="zoom-in-left" class="col-md-6 d-flex justify-content-center">
+        <img src="./images/img.png" alt="Tokenomics" class="img-fluid rounded"
+          style="width: 480px ;max-width: 100%; height: auto;">
+
+      </div>
+
+      <!-- <div class="col-md-6">
+            <div class="marquee-container d-flex justify-content-center">
+              <div class="marquee">
+                <img src="./images/img.png" alt="Image 1">
+                <img src="./images/img2.png" alt="Image 1">
+                <img src="./images/img3.png" alt="Image 1">
+                <img src="./images/img4.png" alt="Image 1">
+                <img src="./images/img5.png" alt="Image 1">
+              </div>
+            </div>
+          </div> -->
+
+    </div>
+  </div>
+
+
+  <!-- How to Buy Section -->
+  <section style="margin-top: 120px;" id="howtobuy" class="container ">
+    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="text-center">How To Buy</h2>
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+      <div class="col">
+        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="card h-100 text-center">
+          <img style="width: 150px; text-align: center" src="./images/metamask.png" class="card-img-top mx-auto d-block"
+            alt="Step 1" />
+          <div class="card-body">
+            <h5 class="card-title my-5">Arm Yourself with a Wallet</h5>
+            <p style="font-size: 13px" class="card-text">
+              Download a powerful wallet like MetaMask or Trust Wallet. Create
+              your secure base, guard your recovery phrase like a weapon, and
+              fortify with strong passwords. You’re setting up the foundation
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="card h-100 text-center">
+          <img style="width: 150px" src="./images/eth.png" class="card-img-top mx-auto d-block" alt="Step 2" />
+          <div class="card-body">
+            <h5 class="card-title my-5">Secure Your ETH Ammo</h5>
+            <p style="font-size: 13px" class="card-text">
+              Buy Ethereum (ETH) for firepower — essential for taking down
+              enemies and covering transaction costs. Grab it through your
+              wallet or transfer from an exchange like Coinbase.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="card h-100 text-center">
+          <img style="width: 150px" src="./images/uniswap.png" class="card-img-top mx-auto d-block" alt="Step 3" />
+          <div class="card-body">
+            <h5 class="card-title my-5">Enter the Battlefield</h5>
+            <p style="font-size: 13px" class="card-text">
+              Launch Uniswap or another DEX, then link your wallet to
+              infiltrate the trading zone. Confirm connections carefully.
+              You’re ready to hunt down your token target; make sure your
+              arsenal is primed, and your ETH’s in position to strike.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="card h-100 text-center">
+          <img style="width: 150px" src="./images/logo.png" class="card-img-top mx-auto d-block" alt="Step 4" />
+          <div class="card-body">
+            <h5 class="card-title my-5">Strike and Conquer</h5>
+            <p style="font-size: 13px" class="card-text">
+              In the DEX, load your ETH, then paste your target token’s
+              contract address to lock in. Review the cost of attack (no gas
+              fees), then click Swap. Confirm the mission in your wallet,
+              await success, and claim victory as your token appears.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="background: rgba(0,0,0,0.7), rgba(0,0,0,0.6), url('./images/bg3.jpg');" class="container my-5">
+    <div class="row align-items-center">
+
+      <!-- Left Column (Tokenomics Cards) -->
+
+      <div data-aos="zoom-in-left" class="col-md-6 d-flex justify-content-center">
+        <img src="./images/img.png" alt="Tokenomics" class="img-fluid rounded"
+          style="width: 480px ;max-width: 100%; height: auto;">
+
+      </div>
+
+
+
+      <!-- Right Column (Image) -->
+
+      <div data-aos="zoom-in-right" class="col-md-6 ">
+        <div>
+          <h1 class="text-end">JOIN THE TRUMBO REVOLUTION</h1>
+          <p class="text-end">
+            Get ready for a wild ride where Trump meets Rambo—unstoppable, fearless, and taking no prisoners. Dive into
+            the battle, be part of the movement, and wield the power of $TRUMBO in the ultimate showdown. Stand with us,
+            and let’s make crypto epic.
+          </p>
+        </div>
+        <div class="text-end ">
+          <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+            data-aos-easing="ease-in-sine" style="background-color: lightcyan;" href="ttlink" class="btn ">
+            <img style="width: 38px; " src="./images/tt.png" alt="" />
+          </a>
+          <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+            style="background-color: lightcyan;" href="tglink" class="btn ms-4">
+            <img style="width: 45px; padding: 10%;" src="./images/tg.png" alt="" />
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Socials Section -->
+  <section style="margin-top: 120px; margin-bottom: 50px;" class="container text-center ">
+    <h2>Follow Us</h2>
+    <div class="social-icons mt-3">
+      <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-easing="ease-in-sine"
+        style="background-color: lightcyan;" href="ttlink" class="btn ">
+        <img style="width: 45px; padding: 10%;" src="./images/tt.png" alt="" />
+      </a>
+      <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+        style="background-color: lightcyan;" href="tglink" class="btn ">
+        <img style="width: 45px; padding: 10%;" src="./images/tg.png" alt="" />
+      </a>
+      </a>
+      <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+        style="background-color: lightskyblue ;" href="dexslink" class="btn ">
+        <img style="width: 45px; padding: 10%;" src="./images/dexs.png" alt="" />
+      </a>
+      </a>
+      <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+        style="background-color: lightcyan;" href="chartlink" class="btn">
+        <img style="width: 45px; padding: 10%;" src="./images/dext.png" alt="" />
+      </a>
+      </a>
+    </div>
+  </section>
+
+  <section style="margin-top: 120px; margin-bottom: 50px;" class="container text-center ">
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3">
+    <p style="color: black;">&copy; TRUMBO. All rights reserved.</p>
+  </footer>
+
+
+  <!-- JS -->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    // Show popup on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      var popupModal = new bootstrap.Modal(
+        document.getElementById("popupModal")
+      );
+      popupModal.show();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
