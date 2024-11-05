@@ -17,6 +17,29 @@ p {
   font-family: "Press Start 2P", system-ui;
   font-style: normal;
 }
+
+.vintage {
+  background: lighten(brown, 5%);
+  color: rgb(234, 156, 0);
+  font-family: "Lobster";
+  text-shadow: 3px 2px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+  span {
+    display: block;
+    /* transform: rotate(-7.5deg); */
+  }
+}
+
+.vintage-p {
+  background: lighten(brown, 5%);
+  color: rgb(234, 156, 0);
+  font-family: "Lobster";
+  text-shadow: 2px 1px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+  span {
+    display: block;
+    /* transform: rotate(-7.5deg); */
+  }
+}
+
 .vid_wrapper {
   position: relative;
   width: 87%;
@@ -33,8 +56,6 @@ p {
   top: 0;
   left: 0;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .vid_wrapper {
